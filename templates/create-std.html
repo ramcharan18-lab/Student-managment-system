@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef4f5;
+            padding: 30px;
+        }
+
+        /* Form Card */
+        .card {
+            width: 450px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(18, 59, 70, 0.12);
+        }
+
+        /* Heading */
+        h2 {
+            text-align: center;
+            color: #123b46;
+            font-size: 26px;
+            margin-bottom: 30px;
+        }
+
+        /* Labels */
+        label {
+            display: block;
+            text-align: left;
+            color: #123b46;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        /* Input Fields */
+        input, select {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #cbdada;
+            border-radius: 6px;
+            outline: none;
+            font-size: 15px;
+            background-color: #f8fbfb;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus {
+            border-color: #008b8b;
+            box-shadow: 0 0 5px rgba(0, 139, 139, 0.25);
+            background-color: #ffffff;
+        }
+
+        /* Form Spacing */
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        /* Add Button */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #008b8b;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #006666;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 500px) {
+            body {
+                padding: 15px;
+            }
+
+            .card {
+                width: 100%;
+                padding: 22px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h2>Fill the Form</h2>
+
+        <form action="/student/add" method="POST">
+
+            <div class="form-group">
+                <label for="name">Name :</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age :</label>
+                <input type="text" id="age" name="age">
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender :</label>
+                <input type="text" id="gender" name="gender">
+            </div>
+
+            <div class="form-group">
+                <label for="marks">Marks :</label>
+                <input type="text" id="marks" name="marks">
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course :</label>
+                <input type="text" id="course" name="course">
+            </div>
+
+            <div class="form-group">
+                <label for="image">Image :</label>
+                <input type="text" id="image" name="image">
+            </div>
+
+            <div class="form-group">
+                <label for="status">Attendance :</label>
+                <select name="status" id="status">
+                    <option value="1">Present</option>
+                    <option value="0">Absent</option>
+                </select>
+            </div>
+
+            <button type="submit">Add Student +</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
